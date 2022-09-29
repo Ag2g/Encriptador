@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de mensajes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="Encabezado">
+        <div class="encriptador">
+            <div class="encriptador_titulo">
+                <h1>Encriptador de Texto</h1>
+            </div>
+            
+            <form id="forma" method="GET" action="">
+                <div class="bloque">
+                    <div class="escribir_mensaje">
+                        <div id="mensaje">Escribir Texto a encriptar</div>
+                        <br>
+                        <textarea name="texto1" id="texto1" cols="30" rows="3" onfocus="this.select()"
+                            onchange="this.value=this.value.toLowerCase();"></textarea>
+                        <br>
+                        <h6>Solo letras minúsculas y sin acento</h6> 
+                        <button type="button" class="btn" id="encriptar" onclick="encriptarMensaje()">
+                            <ion-icon id="ion_icon" name="lock-closed-outline"></ion-icon>Encriptar
+                        </button>
+                        <button type="button" class="btn" id="desencriptar" onclick="desencriptarMensaje()">
+                            <ion-icon id="ion_icon" name="lock-open-outline"></ion-icon>Desencriptar
+                        </button>
+                    </div>
+                    <div class="mensaje_encriptado">
+                        <div id="mensaje">Texto encriptado</div>
+                        <br>
+                        <textarea name="texto2" id="texto2" cols="30" rows="3" onfocus="this.select()"
+                            onchange="this.value=this.value.toLowerCase();"></textarea>
+                        <br>
+                        <button type="button" class="btn" id="copiar" onclick="copiarMensaje()">
+                            <ion-icon id="ion_icon" name="copy-outline"></ion-icon>Copiar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/aplicacion.js"></script>
+    
+    <footer class="piedepagina">
+        <div class="post-footer">
+            by Arturo Garcia
+        </div>
+    </footer>
+</body>
+
+</html>
